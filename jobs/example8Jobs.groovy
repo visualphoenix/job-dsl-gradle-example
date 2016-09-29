@@ -15,13 +15,6 @@ job("$basePath/grails-example-build") {
             branch '${sha1}'
         }
     }
-    triggers {
-        githubPullRequest {
-            admin 'sheehan'
-            triggerPhrase 'OK to test'
-            onlyTriggerPhrase true
-        }
-    }
     steps {
         grails {
             useWrapper true
